@@ -57,12 +57,12 @@ async function generateImage() {
 
   const screenshotBuffer = await page.screenshot({
     fullPage: false,
-    type: "jpeg",
+    type: "png",
   });
 
   await page.screenshot({
-    path: 'page.jpeg',
-    type: "jpeg",
+    path: 'page.png',
+    type: "png",
   });
 
   await page.close();
