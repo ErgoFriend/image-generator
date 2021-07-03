@@ -1,0 +1,23 @@
+{
+  "name": "image-generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "ssh://git@github.com/ErgoFriend/image-generator.git",
+  "author": "ErgoFriend <erg.friend@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "esbuild-dev --supervise -w index.ts",
+    "build": "esbuild index.ts --platform=node --bundle --outfile=main.js",
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "fastify": "^3.18.1",
+    "puppeteer": "^10.1.0"
+  },
+  "devDependencies": {
+    "@types/ejs": "^3.0.6",
+    "esbuild": "^0.12.14",
+    "esbuild-dev": "^0.7.1"
+  }
+}
