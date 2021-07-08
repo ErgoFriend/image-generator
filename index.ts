@@ -32,6 +32,7 @@ async function generateImage() {
   
   // Set the content to our rendered HTML
   await page.setContent(html, { waitUntil: "domcontentloaded" });
+  await page.addStyleTag({content: 'body { margin: 0 }'});
 
   // Wait until all images and fonts have loaded
   await page.evaluate(async () => {
